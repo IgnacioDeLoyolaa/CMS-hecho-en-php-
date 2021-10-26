@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+RewriteEngine on
+#Rutas Administrador
+RewriteRule ^admin/posts$ admin/index.php?section=posts [QSA]
+RewriteRule ^admin/categories$ admin/index.php?section=categories [QSA]
+RewriteRule ^admin/edit-post/([0-9]+)$ admin/index.php?section=edit-post&id_publicaciones=$1 [QSA]
+#Rutas Usuario
+RewriteRule ^posts$ index.php?section=posts [QSA]
+RewriteRule ^post/([0-9]+)$ index.php?section=post&id_publicaciones=$1 [QSA]
+RewriteRule ^register$ index.php?section=register [QSA]
+RewriteRule ^log-in$ index.php?section=log-in [QSA]
+RewriteRule ^my-favorites$ index.php?section=my-favorites [QSA]
